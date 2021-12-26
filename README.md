@@ -10,7 +10,9 @@ DAOPort is like a teleport system for the code that DAOs want to run on mainnet,
 ## How Does it work
 1. DAOPort is deployed to mainnet at *redacted*
 2. Call the `createTeleporter()` function on DAOport with the paramters of any arbitrary call to any mainnet dapp you want to interact with
-3. DAOPort deploys a new mini contract (a "teleporter") 
+3. DAOPort deploys a new mini contract (a "teleporter"). Every Teleporter has only 1 public function which is also deterministic, so everyone knows exactly what it will do when it is called.  
+4. Teleporters can easily be created to do things like: buy a specific NFT from a less-popular marketplace, fund a yield farm, call arbitrary functions on any mainnet smart contract.
+5. Any DAO can now vote to send funds over a bridge to a Teleporter. Anyone can activate the Teleporter to move those funds where the DAO has decided, and also make a function call that the DAO has approved. 
 
 ### Example
 - Bob and Alice are in a DAO and want to fund a yield farm with tokens in their DAO's treasury
